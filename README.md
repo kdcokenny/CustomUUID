@@ -36,7 +36,7 @@ pip install custom_uuid
 Basic usage example:
 
 ```python
-from customuuid import create_uuid
+from custom_uuid import create_uuid
 
 # Generate a standard UUID
 uuid = create_uuid()
@@ -46,7 +46,7 @@ print(uuid)
 Advanced usage with custom values:
 
 ```python
-from customuuid import create_custom_uuid
+from custom_uuid import create_custom_uuid
 
 # Generate a UUID with custom values
 uuid = create_custom_uuid(include_date=True, custom_values=["app_id", "user_id"])
