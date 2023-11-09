@@ -1,3 +1,6 @@
+from .main import (
+    generate_custom_uuid
+)
 from .templates import (
     compact_uuid,
     timestamped_uuid,
@@ -7,6 +10,7 @@ from .templates import (
 )
 
 __all__ = [
+    "generate_custom_uuid",
     "uuid_with_date",
     "uuid_for_app",
     "compact_uuid",

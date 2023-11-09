@@ -33,25 +33,69 @@ pip install custom_uuid
 
 ## Usage
 
-Basic usage example:
+### Basic Usage Examples with Sample Outputs
 
-```python
-from custom_uuid import create_uuid
+1. **Generating a Standard UUID:**
+   ```python
+   import custom_uuid
 
-# Generate a standard UUID
-uuid = create_uuid()
-print(uuid)
-```
+   standard_uuid = custom_uuid.generate_custom_uuid()
+   print("Standard UUID:", standard_uuid)
+   ```
+   Output:
+   ```
+   Standard UUID: 123e4567-e89b-12d3-a456-426614174000
+   ```
 
-Advanced usage with custom values:
+2. **Generating a UUID with Current Date:**
+   ```python
+   date_uuid = custom_uuid.uuid_with_date()
+   print("UUID with Date:", date_uuid)
+   ```
+   Output:
+   ```
+   UUID with Date: 20231109-123e4567-e89b-12d3-a456-426614174000
+   ```
 
-```python
-from custom_uuid import create_custom_uuid
+3. **Generating a UUID for a Specific Application:**
+   ```python
+   app_uuid = custom_uuid.uuid_for_app("MyApp123")
+   print("UUID for App:", app_uuid)
+   ```
+   Output:
+   ```
+   UUID for App: MyApp123-20231109-123e4567-e89b-12d3-a456-426614174000
+   ```
 
-# Generate a UUID with custom values
-uuid = create_custom_uuid(include_date=True, custom_values=["app_id", "user_id"])
-print(uuid)
-```
+4. **Generating a Compact UUID Without Separators:**
+   ```python
+   compact_uuid = custom_uuid.compact_uuid()
+   print("Compact UUID:", compact_uuid)
+   ```
+   Output:
+   ```
+   Compact UUID: 123e4567e89b12d3a456426614174000
+   ```
+
+5. **Generating a UUID with Custom Elements:**
+   ```python
+   custom_elements_uuid = custom_uuid.uuid_with_custom_elements("Element1", "Element2")
+   print("UUID with Custom Elements:", custom_elements_uuid)
+   ```
+   Output:
+   ```
+   UUID with Custom Elements: Element1-Element2-20231109-123e4567-e89b-12d3-a456-426614174000
+   ```
+
+6. **Generating a Timestamped UUID:**
+   ```python
+   timestamped_uuid = custom_uuid.timestamped_uuid()
+   print("Timestamped UUID:", timestamped_uuid)
+   ```
+   Output:
+   ```
+   Timestamped UUID: 20231109123000-123e4567-e89b-12d3-a456-426614174000
+   ```
 
 ## Configuration
 
